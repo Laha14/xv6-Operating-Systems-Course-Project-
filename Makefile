@@ -181,10 +181,9 @@ UPROGS=\
 	_usertests\
 	_wc\
 	_zombie\
-        _alarmtest\
-        _alarmdisable\
-       _alarmcheck\
-#alarm field for task 1
+    _alarmtest\
+    _alarmdisable\
+	_bigfile\
 
 fs.img: mkfs README $(UPROGS)
 	./mkfs fs.img README $(UPROGS)
