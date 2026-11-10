@@ -1,0 +1,11 @@
+
+kernel side
+stat.h - defined a new type caled T_SYMLINK 
+syscall.c - add sys_symlink to the prototypes and array Mappings
+syscall.h - define SYS_symlink
+sysfile.c - write a new handler for symlink system call and also 
+            edit the pre-existing sys_open() function so it handles files of
+            of the newly added T_SYMLINK type too
+user side
+user.h - add the function declaration to symlink 
+usys.pl - add entry("symlink") 
