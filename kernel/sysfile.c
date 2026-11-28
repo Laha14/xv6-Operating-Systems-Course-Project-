@@ -311,7 +311,7 @@ fail:
 }
 
 uint64
-sys_open(void)  //<-- modify sys_open to recognise symlink as a new type
+sys_open(void)  //<-- task 2a modify sys_open to recognise symlink as a new type
 {
   char path[MAXPATH];
   int fd, omode;
@@ -542,7 +542,7 @@ sys_pipe(void)
   return 0;
 }
 
-//symbolic link
+// task 2a symbolic link
 uint64
 sys_symlink(void){
   char target[MAXPATH], path[MAXPATH];

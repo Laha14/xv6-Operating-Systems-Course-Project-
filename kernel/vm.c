@@ -463,7 +463,7 @@ vmfault(pagetable_t pagetable, uint64 psz, uint64 va, int read)
 {
   uint64 mem;
 
-  // ---- task 3: lazily map a file-backed (mmap) page ----
+  //  task 3: lazily map a file-backed (mmap) page 
   struct proc *p = myproc();
   if (p && pagetable == p->pagetable &&
       mmap_handler(va, read ? 13 : 15) == 0) {
@@ -472,7 +472,7 @@ vmfault(pagetable_t pagetable, uint64 psz, uint64 va, int read)
       return PTE2PA(*pte);      // nonzero physical address = success
     return 0;
   }
-  // ---- end task 3 ----
+  //  end task 3 
 
   if (va >= psz)
     return 0;
